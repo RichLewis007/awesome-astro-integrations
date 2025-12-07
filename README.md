@@ -1,8 +1,7 @@
 
-# TODO: Add links to integrations!
 
-# Awesome-Astro-js-Integrations
-Awesome Astro Integrations! Constantly updated with reviews and recommendations for your kind of project.
+# Awesome Astro Integrations
+Personally maintained reviews and examples of the very best, most useful Astro Integrations. Constantly updated with reviews and recommendations for your kind of project.
 
 A curated, opinionated list of Astro integrations that deliver real impact on your project.
 
