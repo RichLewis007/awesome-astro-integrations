@@ -5,7 +5,7 @@
 **A curated, opinionated collection of the very best Astro integrations**
 
 [![Astro](https://img.shields.io/badge/Astro-5.0+-FF5D01?logo=astro&logoColor=white)](https://astro.build)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC0--1.0-blue.svg)](LICENSE)
 [![Maintained](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/RichLewis007/awesome-astro-integrations)
 
 _Constantly updated with reviews and recommendations for your kind of project_
