@@ -8,7 +8,6 @@
 Extensions and plugins that add functionality to Astro web framework projects.
 
 [![Astro](https://img.shields.io/badge/Astro-5.0+-FF5D01?logo=astro&logoColor=white)](https://astro.build)
-[![Maintained](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/RichLewis007/awesome-astro-integrations)
 
 _Updated with reviews and recommendations for your kind of project_
 
