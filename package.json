@@ -1,0 +1,24 @@
+{
+  "name": "awesome-astro-integrations",
+  "version": "1.0.0",
+  "description": "A curated list of the best Astro integrations",
+  "scripts": {
+    "lint": "awesome-lint"
+  },
+  "keywords": [
+    "astro",
+    "integrations",
+    "awesome",
+    "awesome-list"
+  ],
+  "author": "Rich Lewis",
+  "license": "CC0-1.0",
+  "devDependencies": {},
+  "remarkConfig": {
+    "plugins": [
+      ["remark-lint-awesome-list-item", false],
+      ["remark-lint-awesome-badge", false],
+      ["remark-lint-awesome-contributing", false]
+    ]
+  }
+}

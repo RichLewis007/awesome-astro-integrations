@@ -23,7 +23,7 @@ npm i -D astro-compress
 
 ## Critical CSS
 
-### astro-critters
+### astro-critters {#astro-critters}
 
 ```ts
 // astro.config.mjs
@@ -44,7 +44,7 @@ export default defineConfig({
 npm i -D astro-critters
 ```
 
-### astro-critical-css
+### astro-critical-css {#astro-critical-css}
 
 ```ts
 // astro.config.mjs

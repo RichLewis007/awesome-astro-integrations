@@ -1,8 +1,7 @@
-<!--lint disable awesome-list-item awesome-badge awesome-contributing-->
+<!--lint disable awesome-list-item awesome-badge awesome-contributing double-link-->
+<div align="center">
 
 # 🚀 Awesome Astro Integrations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-
-<div align="center">
 
 **A curated, opinionated collection of the very best Astro integrations**
 
@@ -46,7 +45,7 @@ _Constantly updated with reviews and recommendations for your kind of project_
 
 This repository is your go-to resource for discovering the best Astro integrations. Whether you're building a blog, documentation site, e-commerce platform, or web application, you'll find carefully curated integrations that deliver real impact.
 
-**Curated by:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
+**Curated by:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007))
 
 **What makes an integration "AWESOME"?**
 
@@ -466,7 +465,7 @@ npm i -D astro-compress
 
 - [📦 npm](https://www.npmjs.com/package/astro-critters)
 - [💻 GitHub](https://github.com/fariasf/astro-critters)
-- [📝 Code Examples](./examples/performance-optimization.md#critical-css)
+- [📝 Code Examples](./examples/performance-optimization.md#astro-critters)
 
 **Why it's awesome:** Inlines above-the-fold CSS and lazy-loads the rest for faster first paint.
 
@@ -485,7 +484,7 @@ npm i -D astro-critters
 
 - [📦 npm](https://www.npmjs.com/package/astro-critical-css)
 - [💻 GitHub](https://github.com/rumaan/astro-critical-css)
-- [📝 Code Examples](./examples/performance-optimization.md#critical-css)
+- [📝 Code Examples](./examples/performance-optimization.md#astro-critical-css)
 
 **Why it's awesome:** Alternative to astro-critters with different extraction strategy.
 
@@ -1016,7 +1015,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 Contributions are welcome! This repository aims to be a comprehensive resource for Astro integrations.
 
-**Curator:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
+**Curator:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007))
 
 **How to contribute:**
 
@@ -1039,7 +1038,7 @@ Contributions are welcome! This repository aims to be a comprehensive resource f
 
 **Made with ❤️ for the Astro community**
 
-Curated by [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
+Curated by [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007))
 
 [⭐ Star this repo](https://github.com/RichLewis007/awesome-astro-integrations) if you find it helpful!
 
