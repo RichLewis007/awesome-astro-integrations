@@ -1,544 +1,1044 @@
+# 🚀 Awesome Astro Integrations
 
+<div align="center">
 
-# Awesome Astro Integrations
-Personally maintained reviews and examples of the very best, most useful Astro Integrations. Constantly updated with reviews and recommendations for your kind of project.
+**A curated, opinionated collection of the very best Astro integrations**
 
-A curated, opinionated list of Astro integrations that deliver real impact on your project.
+[![Astro](https://img.shields.io/badge/Astro-5.0+-FF5D01?logo=astro&logoColor=white)](https://astro.build)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Maintained](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/RichLewis007/awesome-astro-integrations)
 
-## Performance and DX boosters
+_Constantly updated with reviews and recommendations for your kind of project_
 
-* **astro-compress**
-  One switch to minify and compress HTML, CSS, JS, and images in your build. Put it last in your `integrations` array.
-
-* **Critical CSS inliners**
-  Pick one: **astro-critical-css**, **astro-critters**, or PlayForm's **Inline**. They inline above-the-fold CSS and lazy-load the rest for faster first paint.
-
-* **UnoCSS**
-  Utility-first CSS engine with on-demand generation and presets. Usually lighter than shipping a full framework.
-
-* **Partytown**
-  Offload third-party scripts (analytics, tag managers) to a web worker so they stop blocking the main thread.
-
-## Content and docs power
-
-* **@astrojs/mdx**
-  Mix Markdown and components. Keep authoring flow simple and use shortcodes everywhere.
-
-* **Starlight**
-  Astro's official docs theme with search, i18n, strong a11y, and theming. Saves weeks for any docs site.
-
-## Images, icons, and fonts
-
-* **Astro Icon**
-  Local or Iconify icons with smart SVG inlining and sprite dedupe for tiny payloads.
-
-* **astro-font** (directory pick)
-  Automates local and hosted font optimization with sensible defaults.
-
-## Auth and app features
-
-* **Clerk for Astro**
-  Drop-in auth for accounts, sessions, and user management with SSR paths aligned for Astro.
-
-## Analytics that play nice with performance
-
-* **Umami for Astro**
-  Privacy-friendly analytics with smooth integration. Works well with View Transitions and Partytown.
-
-* **Plausible**
-  Lightweight analytics with simple wiring. Community guides and components make it tidy to adopt.
-
-## Official ecosystem and what's new
-
-* **Integrations Directory**
-  The live source of truth. Filter by category and recency when starting a new site.
-
-* **Astro DB**
-  Built-in, managed SQL store with Drizzle ORM for small dynamic features without a separate backend.
+</div>
 
 ---
 
-## Quick picks by goal
+## 📑 Table of Contents
 
-* **Make it feel instant**: astro-critical-css or Inline + astro-compress
-* **Ship fewer bytes of CSS**: UnoCSS
-* **Keep analytics but remove jank**: Partytown + Umami or Plausible
-* **Docs that don't fight you**: Starlight + @astrojs/mdx
-* **Icons without bloat**: Astro Icon
+- [About](#-about)
+- [Quick Start](#-quick-start)
+- [Official Integrations](#-official-integrations)
+  - [UI Frameworks](#ui-frameworks)
+  - [Content & Documentation](#content--documentation)
+  - [Adapters & Deployment](#adapters--deployment)
+  - [Other Official Integrations](#other-official-integrations)
+- [Community Integrations](#-community-integrations)
+  - [Performance & Optimization](#performance--optimization)
+  - [Styling & CSS](#styling--css)
+  - [Images, Icons & Fonts](#images-icons--fonts)
+  - [Authentication & Security](#authentication--security)
+  - [Database & CMS](#database--cms)
+  - [SEO & Analytics](#seo--analytics)
+  - [Developer Experience](#developer-experience)
+  - [Testing & Quality Assurance](#testing--quality-assurance)
+  - [Accessibility](#accessibility)
+- [Code Examples](#-code-examples)
+- [Best Practices](#-best-practices)
+- [Resources](#-resources)
+- [Contributing](#-contributing)
 
 ---
 
-## Example `astro.config.mjs`
+## 🎯 About
+
+This repository is your go-to resource for discovering the best Astro integrations. Whether you're building a blog, documentation site, e-commerce platform, or web application, you'll find carefully curated integrations that deliver real impact.
+
+**Curated by:** [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
+
+**What makes an integration "awesome"?**
+
+- ✅ Actively maintained
+- ✅ Well-documented
+- ✅ Production-ready
+- ✅ Performance-conscious
+- ✅ Developer-friendly
+
+---
+
+## ⚡ Quick Start
+
+<details>
+<summary><strong>Install an integration</strong></summary>
+
+```bash
+# Using Astro's automatic setup (recommended)
+npx astro add react tailwind mdx
+
+# Or install manually
+npm install @astrojs/react @astrojs/tailwind @astrojs/mdx
+```
+
+Then add to your `astro.config.mjs`:
 
 ```ts
-// astro.config.mjs
 import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
-import vue from "@astrojs/vue"; // if you use Vue islands
-import starlight from "@astrojs/starlight"; // if building docs
-// import critters from "astro-critters"; // or astro-critical-css
-// import compress from "astro-compress";
+
 export default defineConfig({
-  integrations: [
-    mdx(),
-    vue(),
-    // starlight(), // enable if using the docs theme
-    // critters(),
-    // compress(),
-  ],
+  integrations: [react(), tailwind(), mdx()],
 });
 ```
 
+</details>
+
+<details>
+<summary><strong>Quick picks by goal</strong></summary>
+
+- **Make it feel instant**: `astro-critical-css` + `astro-compress`
+- **Ship fewer bytes of CSS**: `UnoCSS` or `Tailwind CSS`
+- **Keep analytics but remove jank**: `Partytown` + `Umami` or `Plausible`
+- **Docs that don't fight you**: `Starlight` + `@astrojs/mdx`
+- **Icons without bloat**: `astro-icon`
+- **Add React/Vue/Svelte**: `@astrojs/react`, `@astrojs/vue`, `@astrojs/svelte`
+- **Deploy anywhere**: `@astrojs/vercel`, `@astrojs/netlify`, `@astrojs/cloudflare`
+
+</details>
+
 ---
 
-## Notes and good practices
+## 🏢 Official Integrations
 
-* Prefer fewer, larger islands over many small ones to reduce hydration overhead.
-* Use `client:visible` or `client:idle` to delay hydration where possible.
-* Lazy-import heavy subcomponents inside hydrated islands.
-* Keep the rest of the site native so Astro can ship near-zero JS by default.
+Integrations maintained by the Astro core team. These are battle-tested and production-ready.
 
----
+### UI Frameworks
 
-## Reference snippets
+<details>
+<summary><strong>@astrojs/react</strong> - Use React components in Astro</summary>
 
-Install common picks:
+**Weekly Downloads:** ~1.2M | **Official** | **Most Popular**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/react)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/react)
+- [📝 Code Examples](./examples/ui-frameworks.md#react-integration)
+
+**Why it's awesome:** Seamlessly integrate React components as islands. Perfect for adding interactivity without shipping React to every page.
+
+**Installation:**
 
 ```bash
-# MDX
-npm i -D @astrojs/mdx
-
-# Vue islands (optional)
-npm i -D @astrojs/vue vue
-
-# Critical CSS (choose one)
-npm i -D astro-critters
-# or
-npm i -D astro-critical-css
-
-# Compression
-npm i -D astro-compress
-
-# Icons
-npm i -D astro-icon
-
-# UnoCSS
-npm i -D unocss @unocss/reset
-
-# Partytown
-npm i -D @builder.io/partytown
+npx astro add react
 ```
 
+</details>
+
+<details>
+<summary><strong>@astrojs/vue</strong> - Use Vue components in Astro</summary>
+
+**Weekly Downloads:** ~167K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/vue/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/vue)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/vue)
+- [📝 Code Examples](./examples/ui-frameworks.md#vue-integration)
+
+**Why it's awesome:** Vue 3 support with Composition API. Great for teams already using Vue.
+
+**Installation:**
+
+```bash
+npx astro add vue
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/svelte</strong> - Use Svelte components in Astro</summary>
+
+**Weekly Downloads:** ~264K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/svelte/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/svelte)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/svelte)
+- [📝 Code Examples](./examples/ui-frameworks.md#svelte-integration)
+
+**Why it's awesome:** Svelte's compile-time approach pairs perfectly with Astro's zero-JS philosophy.
+
+**Installation:**
+
+```bash
+npx astro add svelte
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/preact</strong> - Use Preact components in Astro</summary>
+
+**Weekly Downloads:** ~45K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/preact/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/preact)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/preact)
+- [📝 Code Examples](./examples/ui-frameworks.md#preact-integration)
+
+**Why it's awesome:** React-compatible but much smaller (3KB). Perfect for performance-critical apps.
+
+**Installation:**
+
+```bash
+npx astro add preact
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/solid-js</strong> - Use SolidJS components in Astro</summary>
+
+**Weekly Downloads:** ~12K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/solid-js/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/solid-js)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/solid-js)
+- [📝 Code Examples](./examples/ui-frameworks.md#solidjs-integration)
+
+**Why it's awesome:** Fine-grained reactivity with no virtual DOM. Excellent performance characteristics.
+
+**Installation:**
+
+```bash
+npx astro add solid-js
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/alpinejs</strong> - Use Alpine.js in Astro</summary>
+
+**Weekly Downloads:** ~25K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/alpinejs/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/alpinejs)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/alpinejs)
+- [📝 Code Examples](./examples/ui-frameworks.md#alpinejs-integration)
+
+**Why it's awesome:** Minimal JavaScript framework (15KB). Perfect for adding interactivity without a build step.
+
+**Installation:**
+
+```bash
+npx astro add alpinejs
+```
+
+</details>
+
+### Content & Documentation
+
+<details>
+<summary><strong>@astrojs/mdx</strong> - MDX support for Astro</summary>
+
+**Weekly Downloads:** ~986K | **Official** | **Most Popular**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/mdx/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/mdx)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/mdx)
+- [📝 Code Examples](./examples/content-management.md#mdx-integration)
+
+**Why it's awesome:** Mix Markdown with JSX components. Keep authoring flow simple and use shortcodes everywhere.
+
+**Installation:**
+
+```bash
+npx astro add mdx
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/starlight</strong> - Official documentation theme</summary>
+
+**Weekly Downloads:** ~85K | **Official**
+
+- [📖 Documentation](https://starlight.astro.build/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/starlight)
+- [💻 GitHub](https://github.com/withastro/starlight)
+- [📝 Code Examples](./examples/content-management.md#starlight-documentation-theme)
+
+**Why it's awesome:** Built-in search, i18n, strong a11y, and theming. Saves weeks for any docs site.
+
+**Installation:**
+
+```bash
+npx astro add starlight
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/markdoc</strong> - Markdoc support</summary>
+
+**Weekly Downloads:** ~5K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/markdoc/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/markdoc)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/markdoc)
+
+**Why it's awesome:** Structured Markdown with schema validation. Great for content that needs type safety.
+
+**Installation:**
+
+```bash
+npx astro add markdoc
+```
+
+</details>
+
+### Adapters & Deployment
+
+<details>
+<summary><strong>@astrojs/vercel</strong> - Deploy to Vercel</summary>
+
+**Weekly Downloads:** ~241K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/deploy/vercel/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/vercel)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/vercel)
+- [📝 Code Examples](./examples/adapters-deployment.md#vercel-adapter)
+
+**Why it's awesome:** Zero-config deployment with edge functions support. Perfect for SSR and static sites.
+
+**Installation:**
+
+```bash
+npx astro add vercel
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/netlify</strong> - Deploy to Netlify</summary>
+
+**Weekly Downloads:** ~148K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/deploy/netlify/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/netlify)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/netlify)
+- [📝 Code Examples](./examples/adapters-deployment.md#netlify-adapter)
+
+**Why it's awesome:** Netlify Functions and Edge Functions support. Great DX with Netlify Dev.
+
+**Installation:**
+
+```bash
+npx astro add netlify
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/cloudflare</strong> - Deploy to Cloudflare</summary>
+
+**Weekly Downloads:** ~95K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/deploy/cloudflare/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/cloudflare)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/cloudflare)
+- [📝 Code Examples](./examples/adapters-deployment.md#cloudflare-adapter)
+
+**Why it's awesome:** Deploy to Cloudflare Workers/Pages. Edge computing with global distribution.
+
+**Installation:**
+
+```bash
+npx astro add cloudflare
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/node</strong> - Deploy to Node.js</summary>
+
+**Weekly Downloads:** ~623K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/deploy/node/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/node)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/node)
+- [📝 Code Examples](./examples/adapters-deployment.md#nodejs-adapter)
+
+**Why it's awesome:** Deploy to any Node.js server. Flexible for custom hosting setups.
+
+**Installation:**
+
+```bash
+npx astro add node
+```
+
+</details>
+
+### Other Official Integrations
+
+<details>
+<summary><strong>@astrojs/sitemap</strong> - Automatic sitemap generation</summary>
+
+**Weekly Downloads:** ~1.3M | **Official** | **Most Popular**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/sitemap)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/sitemap)
+- [📝 Code Examples](./examples/seo-analytics.md#sitemap-generation)
+
+**Why it's awesome:** Automatically generates sitemaps for SEO. Zero configuration needed.
+
+**Installation:**
+
+```bash
+npx astro add sitemap
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/db</strong> - Built-in database with Drizzle ORM</summary>
+
+**Weekly Downloads:** ~15K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/astro-db/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/db)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/db)
+- [📝 Code Examples](./examples/database-cms.md#astro-db)
+
+**Why it's awesome:** Built-in, managed SQL store. Perfect for small dynamic features without a separate backend.
+
+**Installation:**
+
+```bash
+npx astro add db
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/partytown</strong> - Offload third-party scripts to web workers</summary>
+
+**Weekly Downloads:** ~45K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/partytown/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/partytown)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/partytown)
+- [📝 Code Examples](./examples/performance-optimization.md#partytown)
+
+**Why it's awesome:** Offload analytics and tag managers to web workers. Stops blocking the main thread.
+
+**Installation:**
+
+```bash
+npx astro add partytown
+```
+
+</details>
+
 ---
 
-## Sources and references
+## 🌟 Community Integrations
 
-* [Astro Integrations Guide](https://docs.astro.build/en/guides/integrations-guide/)
-* [Astro Integration API Reference](https://docs.astro.build/en/reference/integrations-reference/)
-* [@astrojs/mdx docs](https://docs.astro.build/en/guides/integrations-guide/mdx/)
-* [Starlight docs](https://starlight.astro.build/)
-* [UnoCSS site](https://unocss.dev/)
-* [Partytown docs](https://partytown.qwik.dev/)
-* [Umami for Astro (integration example)](https://github.com/yeskunall/astro-umami)
-* [Plausible + Astro guide](https://decaster.dev/using-plausible-analytics-in-gatsby-js-or-astro-js/)
-* [Clerk Astro SDK](https://clerk.com/docs/reference/astro/overview)
-* [Astro DB guide](https://docs.astro.build/en/guides/astro-db/)
-* [Astro Icon docs](https://www.astroicon.dev/getting-started/)
-* [astro-critical-css](https://github.com/rumaan/astro-critical-css)
-* [astro-critters](https://github.com/fariasf/astro-critters)
-* [PlayForm Inline](https://github.com/PlayForm/Inline)
-* [astro-compress](https://github.com/kamranahmedse/astro-compress)
+High-quality integrations built and maintained by the Astro community.
+
+### Performance & Optimization
+
+<details>
+<summary><strong>astro-compress</strong> - Minify and compress HTML, CSS, JS, and images</summary>
+
+**Weekly Downloads:** ~25K
+
+- [📦 npm](https://www.npmjs.com/package/astro-compress)
+- [💻 GitHub](https://github.com/kamranahmedse/astro-compress)
+- [📝 Code Examples](./examples/performance-optimization.md#compression-and-minification)
+
+**Why it's awesome:** One switch to minify everything. Put it last in your `integrations` array.
+
+**Installation:**
+
+```bash
+npm i -D astro-compress
+```
+
+</details>
+
+<details>
+<summary><strong>astro-critters</strong> - Inline critical CSS</summary>
+
+**Weekly Downloads:** ~8K
+
+- [📦 npm](https://www.npmjs.com/package/astro-critters)
+- [💻 GitHub](https://github.com/fariasf/astro-critters)
+- [📝 Code Examples](./examples/performance-optimization.md#critical-css)
+
+**Why it's awesome:** Inlines above-the-fold CSS and lazy-loads the rest for faster first paint.
+
+**Installation:**
+
+```bash
+npm i -D astro-critters
+```
+
+</details>
+
+<details>
+<summary><strong>astro-critical-css</strong> - Extract and inline critical CSS</summary>
+
+**Weekly Downloads:** ~3K
+
+- [📦 npm](https://www.npmjs.com/package/astro-critical-css)
+- [💻 GitHub](https://github.com/rumaan/astro-critical-css)
+- [📝 Code Examples](./examples/performance-optimization.md#critical-css)
+
+**Why it's awesome:** Alternative to astro-critters with different extraction strategy.
+
+**Installation:**
+
+```bash
+npm i -D astro-critical-css
+```
+
+</details>
+
+<details>
+<summary><strong>UnoCSS</strong> - Utility-first CSS engine</summary>
+
+**Weekly Downloads:** ~150K
+
+- [📖 Documentation](https://unocss.dev/)
+- [📦 npm](https://www.npmjs.com/package/unocss)
+- [💻 GitHub](https://github.com/unocss/unocss)
+- [📝 Code Examples](./examples/performance-optimization.md#unocss)
+
+**Why it's awesome:** On-demand generation and presets. Usually lighter than shipping a full framework.
+
+**Installation:**
+
+```bash
+npm i -D unocss @unocss/reset
+```
+
+</details>
+
+### Styling & CSS
+
+<details>
+<summary><strong>@astrojs/tailwind</strong> - Tailwind CSS integration</summary>
+
+**Weekly Downloads:** ~861K | **Official**
+
+- [📖 Documentation](https://docs.astro.build/en/guides/integrations-guide/tailwind/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/tailwind)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/tailwind)
+
+**Why it's awesome:** Official Tailwind CSS support. Utility-first styling with zero config.
+
+**Installation:**
+
+```bash
+npx astro add tailwind
+```
+
+</details>
+
+### Images, Icons & Fonts
+
+<details>
+<summary><strong>astro-icon</strong> - Icon component with Iconify support</summary>
+
+**Weekly Downloads:** ~374K
+
+- [📖 Documentation](https://www.astroicon.dev/)
+- [📦 npm](https://www.npmjs.com/package/astro-icon)
+- [💻 GitHub](https://github.com/natemoo-re/astro-icon)
+- [📝 Code Examples](./examples/images-icons-fonts.md#astro-icon)
+
+**Why it's awesome:** Local or Iconify icons with smart SVG inlining and sprite dedupe for tiny payloads.
+
+**Installation:**
+
+```bash
+npm i -D astro-icon
+```
+
+</details>
+
+<details>
+<summary><strong>astro-font</strong> - Font optimization</summary>
+
+**Weekly Downloads:** ~12K
+
+- [📦 npm](https://www.npmjs.com/package/astro-font)
+- [💻 GitHub](https://github.com/ayco/astro-font)
+- [📝 Code Examples](./examples/images-icons-fonts.md#font-optimization)
+
+**Why it's awesome:** Automates local and hosted font optimization with sensible defaults.
+
+**Installation:**
+
+```bash
+npm i -D astro-font
+```
+
+</details>
+
+### Authentication & Security
+
+<details>
+<summary><strong>@clerk/astro</strong> - Clerk authentication</summary>
+
+**Weekly Downloads:** ~5K
+
+- [📖 Documentation](https://clerk.com/docs/reference/astro/overview)
+- [📦 npm](https://www.npmjs.com/package/@clerk/astro)
+- [💻 GitHub](https://github.com/clerk/clerk-sdk-js)
+- [📝 Code Examples](./examples/authentication.md#clerk-authentication)
+
+**Why it's awesome:** Drop-in auth for accounts, sessions, and user management with SSR paths aligned for Astro.
+
+**Installation:**
+
+```bash
+npm i @clerk/astro
+```
+
+</details>
+
+<details>
+<summary><strong>@auth/astro</strong> - Auth.js (NextAuth.js) for Astro</summary>
+
+**Weekly Downloads:** ~8K
+
+- [📖 Documentation](https://authjs.dev/getting-started/installation/adapters/astro)
+- [📦 npm](https://www.npmjs.com/package/@auth/astro)
+- [💻 GitHub](https://github.com/nextauthjs/next-auth)
+- [📝 Code Examples](./examples/authentication.md#authjs-nextauthjs)
+
+**Why it's awesome:** Popular authentication solution with many providers. Great for teams familiar with NextAuth.
+
+**Installation:**
+
+```bash
+npm i @auth/astro
+```
+
+</details>
+
+<details>
+<summary><strong>@supabase/auth-helpers-astro</strong> - Supabase authentication</summary>
+
+**Weekly Downloads:** ~15K
+
+- [📖 Documentation](https://supabase.com/docs/guides/auth/auth-helpers/astro)
+- [📦 npm](https://www.npmjs.com/package/@supabase/auth-helpers-astro)
+- [💻 GitHub](https://github.com/supabase/auth-helpers)
+- [📝 Code Examples](./examples/authentication.md#supabase-auth)
+
+**Why it's awesome:** Open-source Firebase alternative. Includes auth, database, and storage.
+
+**Installation:**
+
+```bash
+npm i @supabase/supabase-js @supabase/auth-helpers-astro
+```
+
+</details>
+
+### Database & CMS
+
+<details>
+<summary><strong>Contentful</strong> - Headless CMS integration</summary>
+
+- [📖 Documentation](https://www.contentful.com/developers/docs/javascript/tutorials/using-contentful-in-astro/)
+- [📦 npm](https://www.npmjs.com/package/contentful)
+- [💻 GitHub](https://github.com/contentful/contentful.js)
+- [📝 Code Examples](./examples/database-cms.md#contentful-cms)
+
+**Why it's awesome:** Popular headless CMS with great developer experience and content modeling.
+
+**Installation:**
+
+```bash
+npm i contentful
+```
+
+</details>
+
+<details>
+<summary><strong>Sanity</strong> - Headless CMS with real-time collaboration</summary>
+
+- [📖 Documentation](https://www.sanity.io/guides/astro)
+- [📦 npm](https://www.npmjs.com/package/@sanity/client)
+- [💻 GitHub](https://github.com/sanity-io/sanity)
+- [📝 Code Examples](./examples/database-cms.md#sanity-cms)
+
+**Why it's awesome:** Real-time collaboration, structured content, and powerful querying.
+
+**Installation:**
+
+```bash
+npm i @sanity/client
+```
+
+</details>
+
+<details>
+<summary><strong>Strapi</strong> - Open-source headless CMS</summary>
+
+- [📖 Documentation](https://strapi.io/integrations/astro-cms)
+- [📦 npm](https://www.npmjs.com/package/@strapi/strapi)
+- [💻 GitHub](https://github.com/strapi/strapi)
+- [📝 Code Examples](./examples/database-cms.md#strapi-cms)
+
+**Why it's awesome:** Self-hosted, open-source CMS with REST and GraphQL APIs.
+
+**Installation:**
+
+```bash
+npm i @strapi/strapi
+```
+
+</details>
+
+<details>
+<summary><strong>Prisma</strong> - Next-generation ORM</summary>
+
+- [📖 Documentation](https://www.prisma.io/docs/getting-started)
+- [📦 npm](https://www.npmjs.com/package/@prisma/client)
+- [💻 GitHub](https://github.com/prisma/prisma)
+- [📝 Code Examples](./examples/database-cms.md#prisma-orm)
+
+**Why it's awesome:** Type-safe database access with excellent developer experience.
+
+**Installation:**
+
+```bash
+npm i @prisma/client
+npm i -D prisma
+```
+
+</details>
+
+### SEO & Analytics
+
+<details>
+<summary><strong>astro-seo</strong> - SEO component</summary>
+
+**Weekly Downloads:** ~153K
+
+- [📦 npm](https://www.npmjs.com/package/astro-seo)
+- [💻 GitHub](https://github.com/jonasmerlin/astro-seo)
+- [📝 Code Examples](./examples/seo-analytics.md#seo-component)
+
+**Why it's awesome:** Makes it easy to add SEO-relevant tags to your Astro app.
+
+**Installation:**
+
+```bash
+npm i -D astro-seo
+```
+
+</details>
+
+<details>
+<summary><strong>Plausible Analytics</strong> - Privacy-friendly analytics</summary>
+
+- [📖 Documentation](https://plausible.io/docs)
+- [💻 GitHub](https://github.com/plausible/analytics)
+- [📝 Code Examples](./examples/seo-analytics.md#plausible-analytics)
+
+**Why it's awesome:** Lightweight analytics with simple wiring. No cookies, GDPR compliant.
+
+**Installation:**
+
+```bash
+# Manual setup - see code examples
+```
+
+</details>
+
+<details>
+<summary><strong>astro-umami</strong> - Umami analytics integration</summary>
+
+**Weekly Downloads:** ~2K
+
+- [📦 npm](https://www.npmjs.com/package/astro-umami)
+- [💻 GitHub](https://github.com/yeskunall/astro-umami)
+- [📝 Code Examples](./examples/seo-analytics.md#umami-analytics)
+
+**Why it's awesome:** Privacy-friendly analytics with smooth integration. Works well with View Transitions and Partytown.
+
+**Installation:**
+
+```bash
+npm i -D astro-umami
+```
+
+</details>
+
+<details>
+<summary><strong>@astrojs/rss</strong> - RSS feed generation</summary>
+
+**Weekly Downloads:** ~45K
+
+- [📖 Documentation](https://docs.astro.build/en/guides/rss/)
+- [📦 npm](https://www.npmjs.com/package/@astrojs/rss)
+- [💻 GitHub](https://github.com/withastro/astro/tree/main/packages/integrations/rss)
+- [📝 Code Examples](./examples/seo-analytics.md#rss-feed)
+
+**Why it's awesome:** Generate RSS for blogs or release notes. Keeps subscribers in sync.
+
+**Installation:**
+
+```bash
+npm i -D @astrojs/rss
+```
+
+</details>
+
+### Developer Experience
+
+<details>
+<summary><strong>astro-auto-import</strong> - Auto-import components</summary>
+
+**Weekly Downloads:** ~8K
+
+- [📦 npm](https://www.npmjs.com/package/astro-auto-import)
+- [💻 GitHub](https://github.com/ElMassimo/astro-auto-import)
+
+**Why it's awesome:** Automatically imports components in Astro projects. Reduces boilerplate.
+
+**Installation:**
+
+```bash
+npm i -D astro-auto-import
+```
+
+</details>
+
+<details>
+<summary><strong>astro-expressive-code</strong> - Syntax highlighting engine</summary>
+
+**Weekly Downloads:** ~12K
+
+- [📦 npm](https://www.npmjs.com/package/astro-expressive-code)
+- [💻 GitHub](https://github.com/expressive-code/astro-expressive-code)
+
+**Why it's awesome:** Modular syntax highlighting & annotation engine for presenting source code.
+
+**Installation:**
+
+```bash
+npm i -D astro-expressive-code
+```
+
+</details>
+
+<details>
+<summary><strong>eslint-plugin-astro</strong> - ESLint plugin for Astro</summary>
+
+**Weekly Downloads:** ~85K
+
+- [📦 npm](https://www.npmjs.com/package/eslint-plugin-astro)
+- [💻 GitHub](https://github.com/ota-meshi/eslint-plugin-astro)
+- [📝 Code Examples](./examples/testing-qa.md#eslint-for-astro)
+
+**Why it's awesome:** Linting Astro components using ESLint. Find problems and apply consistent code style.
+
+**Installation:**
+
+```bash
+npm i -D eslint @astrojs/eslint-config eslint-plugin-astro
+```
+
+</details>
+
+### Testing & Quality Assurance
+
+<details>
+<summary><strong>Vitest</strong> - Unit testing</summary>
+
+- [📖 Documentation](https://vitest.dev/)
+- [📦 npm](https://www.npmjs.com/package/vitest)
+- [💻 GitHub](https://github.com/vitest-dev/vitest)
+- [📝 Code Examples](./examples/testing-qa.md#vitest-setup)
+
+**Why it's awesome:** Fast unit test framework. Works great with Astro's Vite-based build.
+
+**Installation:**
+
+```bash
+npm i -D vitest @testing-library/dom @testing-library/user-event
+```
+
+</details>
+
+<details>
+<summary><strong>Playwright</strong> - End-to-end testing</summary>
+
+- [📖 Documentation](https://playwright.dev/)
+- [📦 npm](https://www.npmjs.com/package/@playwright/test)
+- [💻 GitHub](https://github.com/microsoft/playwright)
+- [📝 Code Examples](./examples/testing-qa.md#playwright-e2e-testing)
+
+**Why it's awesome:** Reliable end-to-end testing. Prevents regressions in layouts, routes, and interactive islands.
+
+**Installation:**
+
+```bash
+npm i -D @playwright/test
+npx playwright install
+```
+
+</details>
+
+<details>
+<summary><strong>@axe-core/playwright</strong> - Accessibility testing</summary>
+
+- [📦 npm](https://www.npmjs.com/package/@axe-core/playwright)
+- [💻 GitHub](https://github.com/dequelabs/axe-core)
+- [📝 Code Examples](./examples/testing-qa.md#accessibility-testing-with-axe)
+
+**Why it's awesome:** Automated accessibility testing. Prevents regressions and improves usability for everyone.
+
+**Installation:**
+
+```bash
+npm i -D @axe-core/playwright
+```
+
+</details>
+
+### Accessibility
+
+<details>
+<summary><strong>astro-a11y</strong> - Accessibility checks</summary>
+
+**Weekly Downloads:** ~3K
+
+- [📦 npm](https://www.npmjs.com/package/astro-a11y)
+- [💻 GitHub](https://github.com/markteekman/astro-a11y)
+
+**Why it's awesome:** Provides accessibility checks and improvements for Astro projects.
+
+**Installation:**
+
+```bash
+npm i -D astro-a11y
+```
+
+</details>
 
 ---
 
-## Next picks backlog
+## 📝 Code Examples
 
-* Data fetching best practices with islands (e.g., TanStack Query)
-* Security headers and CSP patterns
-* Accessibility linting and automated checks
-* RSS feeds for blogs and changelogs
-* Deploy-time image optimization and caching strategies
+Detailed code examples and implementation guides are available in the [`examples/`](./examples/) directory:
 
----
-
-## Backlog details (starting)
-
-### Table of contents
-
-* [@astrojs/image and image pipelines](#astrojsimage-and-image-pipelines)
-* [View Transitions API patterns for Astro](#view-transitions-api-patterns-for-astro)
-* [i18n options for Astro sites](#i18n-options-for-astro-sites)
-* [Adapters: Cloudflare, Vercel, Netlify](#adapters-cloudflare-vercel-netlify)
-* [SEO helpers: sitemap, robots, structured data](#seo-helpers-sitemap-robots-structured-data)
-* [Content Collections and CMS bridges](#content-collections-and-cms-bridges)
-* [Rich code rendering: Shiki and Code Hike](#rich-code-rendering-shiki-and-code-hike)
-* [Testing and QA: Vitest and Playwright](#testing-and-qa-vitest-and-playwright)
-* [Performance and monitoring bundle](#performance-and-monitoring-bundle)
-* [Security headers and CSP patterns](#security-headers-and-csp-patterns)
-* [Accessibility linting and automated checks](#accessibility-linting-and-automated-checks)
-* [Data fetching with TanStack Query](#data-fetching-with-tanstack-query)
-* [RSS feeds and changelog wiring](#rss-feeds-and-changelog-wiring)
-* [Deploy-time image optimization and caching](#deploy-time-image-optimization-and-caching)
-
-### @astrojs/image and image pipelines
-
-* **What it is:** Official image optimization and responsive pipelines for Astro.
-* **Why it matters:** Automatic `srcset`, format conversion, and on-demand transforms keep pages sharp and fast.
-* **Docs:** [https://docs.astro.build/en/guides/images/](https://docs.astro.build/en/guides/images/)
-* **Quick start:**
-
-  ```ts
-  // astro.config.mjs
-  import { defineConfig } from "astro/config";
-  import image from "@astrojs/image";
-  export default defineConfig({ integrations: [image()] });
-  ```
-
-  ```astro
-  ---
-  import { Image } from "@astrojs/image/components";
-  ---
-  <Image src="/hero.jpg" widths={[400, 800, 1200]} sizes="(max-width: 800px) 100vw, 800px" alt="Hero" />
-  ```
-
-### View Transitions API patterns for Astro
-
-* **What it is:** Native browser API to animate page-to-page changes; Astro supports it via the built-in View Transitions feature.
-* **Why it matters:** Adds polish with minimal JS and keeps the SSR/MPA model.
-* **Docs:** [https://docs.astro.build/en/guides/view-transitions/](https://docs.astro.build/en/guides/view-transitions/)
-* **Quick start:**
-
-  ```ts
-  // astro.config.mjs
-  export default { experimental: { viewTransitions: true } };
-  ```
-
-  ```css
-  /* global.css */
-  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .25s; }
-  ```
-
-### i18n options for Astro sites
-
-* **What it is:** Internationalization via Starlight i18n, route-based i18n, or community integrations.
-* **Why it matters:** Localized content with clean URLs and minimal overhead.
-* **Docs:**
-
-  * Starlight i18n: [https://starlight.astro.build/guides/i18n/](https://starlight.astro.build/guides/i18n/)
-  * Core routing patterns: [https://docs.astro.build/en/guides/internationalization/](https://docs.astro.build/en/guides/internationalization/)
-
-### Adapters: Cloudflare, Vercel, Netlify
-
-* **What it is:** Server adapters to run SSR or islands on your target platform.
-* **Docs:**
-
-  * Cloudflare: [https://docs.astro.build/en/guides/deploy/cloudflare/](https://docs.astro.build/en/guides/deploy/cloudflare/)
-  * Vercel: [https://docs.astro.build/en/guides/deploy/vercel/](https://docs.astro.build/en/guides/deploy/vercel/)
-  * Netlify: [https://docs.netlify.com/build/frameworks/framework-setup-guides/astro/](https://docs.netlify.com/build/frameworks/framework-setup-guides/astro/)
-* **Tip:** Prefer SSG where possible; use SSR only where a dynamic route actually needs it.
-
-### SEO helpers: sitemap, robots, structured data
-
-* **What it is:** Official and community integrations for SEO basics.
-* **Docs:**
-
-  * Sitemap: [https://docs.astro.build/en/guides/integrations-guide/sitemap/](https://docs.astro.build/en/guides/integrations-guide/sitemap/)
-  * Robots: [https://docs.astro.build/en/guides/seo/#robots-txt](https://docs.astro.build/en/guides/seo/#robots-txt)
-  * Structured data: [https://docs.astro.build/en/guides/seo/#structured-data](https://docs.astro.build/en/guides/seo/#structured-data)
-* **Snippet:**
-
-  ```ts
-  import sitemap from "@astrojs/sitemap";
-  export default { site: "https://example.com", integrations: [sitemap()] };
-  ```
-
-### Content Collections and CMS bridges
-
-* **What it is:** Astro Content Collections provide typed frontmatter and fast lookups for Markdown/MDX, JSON, and YAML content. CMS bridges sync or fetch content from a headless CMS.
-* **Why it matters:** Schemas catch content mistakes at build time; bridges let non-devs edit without touching the repo.
-* **Docs:**
-
-  * Content Collections: [https://docs.astro.build/en/guides/content-collections/](https://docs.astro.build/en/guides/content-collections/)
-  * Sanity: [https://www.sanity.io/guides/astro](https://www.sanity.io/guides/astro)
-  * Contentful: [https://www.contentful.com/developers/docs/javascript/tutorials/using-contentful-in-astro/](https://www.contentful.com/developers/docs/javascript/tutorials/using-contentful-in-astro/)
-  * Storyblok: [https://www.storyblok.com/mp/astro-cms](https://www.storyblok.com/mp/astro-cms)
-* **Quick start (collections):**
-
-  ```ts
-  // src/content/config.ts
-  import { defineCollection, z } from "astro:content";
-  const posts = defineCollection({
-    type: "content",
-    schema: z.object({
-      title: z.string(),
-      date: z.string().transform((s) => new Date(s)),
-      tags: z.array(z.string()).default([]),
-      draft: z.boolean().default(false),
-    }),
-  });
-  export const collections = { posts };
-  ```
-
-  ```ts
-  // astro.config.mjs
-  export default { integrations: [], markdown: { shikiConfig: { theme: "github-light" } } };
-  ```
-
-  ```astro
-  ---
-  import { getCollection } from "astro:content";
-  const posts = await getCollection("posts", ({ data }) => !data.draft);
-  ---
-  <ul>{posts.map(p => <li><a href={p.slug}>{p.data.title}</a></li>)}</ul>
-  ```
-* **CMS bridge pattern:** fetch at build time via an API client, write to `src/content/` JSON, or pull at request time on specific routes. Cache aggressively.
-
-### Rich code rendering: Shiki and Code Hike
-
-* **What it is:** Shiki is a fast, accurate syntax highlighter; Code Hike adds rich code UI (scrolly code, diff, focus lines).
-* **Why it matters:** Developer blogs and docs look pro, with accessible color contrast and copyable blocks.
-* **Shiki quick start:**
-
-  ```ts
-  // astro.config.mjs
-  import { defineConfig } from "astro/config";
-  export default defineConfig({
-    markdown: {
-      syntaxHighlight: "shiki",
-      shikiConfig: { theme: "github-dark", wrap: true },
-    },
-  });
-  ```
-* **Code Hike sketch:**
-
-  ```bash
-  npm i -D codehike
-  ```
-
-  ```mdx
-  ---
-  setup: |
-    import { CH } from "codehike/mdx";
-  ---
-  <CH.Code code={`console.log('hi')`} lang="js" />
-  ```
-
-  Tip: keep number of heavy MDX plugins low to avoid slow builds.
-
-### Testing and QA: Vitest and Playwright
-
-* **What it is:** Unit tests with Vitest and component tests for islands; Playwright drives real browser E2E.
-* **Why it matters:** Prevent regressions in layouts, routes, and interactive islands.
-* **Vitest quick start:**
-
-  ```bash
-  npm i -D vitest @testing-library/dom @testing-library/user-event
-  ```
-
-  ```ts
-  // vitest.config.ts
-  import { defineConfig } from "vitest/config";
-  export default defineConfig({ test: { environment: "happy-dom" } });
-  ```
-* **Playwright quick start:**
-
-  ```bash
-  npm i -D @playwright/test
-  npx playwright install
-  ```
-
-  ```ts
-  // tests/home.spec.ts
-  import { test, expect } from "@playwright/test";
-  test("home loads", async ({ page }) => {
-    await page.goto("http://localhost:4321");
-    await expect(page.getByRole("heading", { name: "Hello" })).toBeVisible();
-  });
-  ```
-
-  CI tip: build once, run both Playwright and Lighthouse CI against the same build output.
-
-### Performance and monitoring bundle
-
-* **What it is:** Automate perf checks and production monitoring.
-* **Why it matters:** Catch regressions before they ship; see real user metrics in prod.
-* **Lighthouse CI (GitHub Actions):**
-
-  ```yaml
-  name: lhci
-  on: [push]
-  jobs:
-    lhci:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-node@v4
-          with: { node-version: 20 }
-        - run: npm ci
-        - run: npm run build
-        - run: npx lhci autorun --upload.target=temporary-public-storage
-  ```
-* **Core Web Vitals in prod:** use a tiny script to send CLS, LCP, INP to your analytics endpoint.
-
-  ```html
-  <script type="module">
-    import { onLCP, onINP, onCLS } from "https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.js";
-    const send = (m) => navigator.sendBeacon("/vitals", JSON.stringify(m));
-    onLCP(send); onINP(send); onCLS(send);
-  </script>
-  ```
-* **Error and trace monitoring:** Sentry or OpenReplay for client errors; platform logs for SSR adapters. Remember to scrub PII.
-* **Cloudflare insights:** If deploying to Pages, enable Analytics and Logs; set long cache headers for static assets.
+- [Performance Optimization](./examples/performance-optimization.md) - Compression, critical CSS, Partytown, UnoCSS
+- [Content Management](./examples/content-management.md) - MDX, Content Collections, Starlight
+- [UI Frameworks](./examples/ui-frameworks.md) - React, Vue, Svelte, Preact, SolidJS, Alpine.js
+- [Adapters & Deployment](./examples/adapters-deployment.md) - Vercel, Netlify, Cloudflare, Node.js
+- [SEO & Analytics](./examples/seo-analytics.md) - Sitemap, SEO tags, Google Analytics, Plausible, Umami, RSS
+- [Images, Icons & Fonts](./examples/images-icons-fonts.md) - Astro Icon, image optimization, font loading
+- [Authentication](./examples/authentication.md) - Clerk, Auth.js, Supabase, Lucia
+- [Database & CMS](./examples/database-cms.md) - Astro DB, Contentful, Sanity, Strapi, Prisma
+- [Testing & QA](./examples/testing-qa.md) - Vitest, Playwright, ESLint, accessibility testing
 
 ---
 
-### Security headers and CSP patterns
+## 💡 Best Practices
 
-* **What it is:** HTTP response headers that harden your site: `Content-Security-Policy`, `Strict-Transport-Security`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`.
-* **Why it matters:** Blocks common injection vectors and mixed content; reduces blast radius if a script is compromised.
-* **Docs:**
+<details>
+<summary><strong>Island Architecture</strong></summary>
 
-  * CSP: [https://developer.mozilla.org/docs/Web/HTTP/CSP](https://developer.mozilla.org/docs/Web/HTTP/CSP)
-  * Security headers overview: [https://developer.mozilla.org/docs/Web/HTTP/Headers](https://developer.mozilla.org/docs/Web/HTTP/Headers)
-  * Astro adapters guidance: [https://docs.astro.build/en/guides/deploy/](https://docs.astro.build/en/guides/deploy/)
-* **Cloudflare Pages/Workers example (wrangler.toml):**
+- Prefer fewer, larger islands over many small ones to reduce hydration overhead
+- Use `client:visible` or `client:idle` to delay hydration where possible
+- Lazy-import heavy subcomponents inside hydrated islands
+- Keep the rest of the site native so Astro can ship near-zero JS by default
 
-  ```toml
-  [vars]
-  SECURITY_HEADERS = "true"
-  ```
+</details>
 
-  ```js
-  // functions/_middleware.js (Workers)
-  export async function onRequest({ next }) {
-    const res = await next();
-    res.headers.set("X-Content-Type-Options", "nosniff");
-    res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
-    res.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
-    res.headers.set("X-Frame-Options", "DENY");
-    res.headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
-    res.headers.set("Content-Security-Policy", [
-      "default-src 'self'",
-      "img-src 'self' data: https:",
-      "script-src 'self' 'unsafe-inline' https:",
-      "style-src 'self' 'unsafe-inline' https:",
-      "connect-src 'self' https:",
-      "font-src 'self' https: data:",
-    ].join("; "));
-    return res;
-  }
-  ```
+<details>
+<summary><strong>Performance</strong></summary>
 
-  Tip: start with `report-only` for CSP during rollout and inspect violations in your logs.
+- Put compression integrations last in your `integrations` array
+- Use critical CSS inliners for faster first paint
+- Offload third-party scripts to Partytown
+- Optimize images using Astro's built-in image optimization
 
-### Accessibility linting and automated checks
+</details>
 
-* **What it is:** Static checks and runtime scans to catch a11y issues.
-* **Why it matters:** Prevents regressions and improves usability for everyone.
-* **Tools:**
+<details>
+<summary><strong>SEO</strong></summary>
 
-  * ESLint a11y: `eslint-plugin-jsx-a11y` for JSX islands; `astro-eslint-parser` for .astro files.
-  * Playwright Axe: integrate Axe-core in E2E scans.
-* **Snippets:**
+- Always set your `site` URL in `astro.config.mjs` for sitemap generation
+- Use structured data (JSON-LD) for rich snippets
+- Generate RSS feeds for blogs and changelogs
+- Set up proper robots.txt
 
-  ```bash
-  npm i -D eslint @astrojs/eslint-config eslint-plugin-jsx-a11y
-  ```
+</details>
 
-  ```js
-  // .eslintrc.cjs
-  module.exports = { extends: ["@astrojs/eslint-config", "plugin:jsx-a11y/recommended"] };
-  ```
+<details>
+<summary><strong>Security</strong></summary>
 
-  ```ts
-  // tests/a11y.spec.ts
-  import { test, expect } from "@playwright/test";
-  import AxeBuilder from "@axe-core/playwright";
-  test("a11y", async ({ page }) => {
-    await page.goto("http://localhost:4321");
-    const results = await new AxeBuilder({ page }).analyze();
-    expect(results.violations).toEqual([]);
-  });
-  ```
+- Use security headers (CSP, HSTS, etc.)
+- Validate environment variables
+- Sanitize user input
+- Use HTTPS everywhere
 
-### Data fetching with TanStack Query
+</details>
 
-* **What it is:** Client-side fetching, caching, and background updates inside hydrated islands.
-* **Why it matters:** Smooth UX for dashboards and editors without hand-rolled fetch state.
-* **Docs:** [https://tanstack.com/query/latest](https://tanstack.com/query/latest)
-* **Vue island example:**
+---
 
-  ```bash
-  npm i @tanstack/vue-query
-  ```
+## 📚 Resources
 
-  ```vue
-  <!-- src/components/UsersPane.vue -->
-  <script setup>
-  import { VueQueryPlugin, useQuery } from "@tanstack/vue-query";
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["users"],
-    queryFn: () => fetch("/api/users").then(r => r.json()),
-    staleTime: 60_000,
-  });
-  </script>
-  <template>
-    <div v-if="isLoading">Loading...</div>
-    <div v-else-if="error">Error</div>
-    <ul><li v-for="u in data" :key="u.id">{{ u.name }}</li></ul>
-  </template>
-  ```
+### Official Resources
 
-  ```astro
-  ---
-  import UsersPane from "../components/UsersPane.vue";
-  ---
-  <UsersPane client:visible />
-  ```
+- [Astro Documentation](https://docs.astro.build/)
+- [Astro Integrations Guide](https://docs.astro.build/en/guides/integrations-guide/)
+- [Astro Integration API Reference](https://docs.astro.build/en/reference/integrations-reference/)
+- [Astro Integrations Directory](https://astro.build/integrations/)
+- [Astro Discord Community](https://astro.build/chat)
 
-  Tip: co-locate server endpoints with `src/pages/api/*.ts`; cache at the edge when possible.
+### Community Resources
 
-### RSS feeds and changelog wiring
+- [Astro Blog](https://astro.build/blog/)
+- [Astro GitHub Discussions](https://github.com/withastro/astro/discussions)
+- [r/astrojs](https://www.reddit.com/r/astrojs/) - Reddit community
+- [Stack Overflow - Astro](https://stackoverflow.com/questions/tagged/astro)
 
-* **What it is:** Generate RSS for blogs or release notes; keeps subscribers in sync.
-* **Docs:** [https://docs.astro.build/en/guides/rss/](https://docs.astro.build/en/guides/rss/)
-* **Quick start:**
+### Related Awesome Lists
 
-  ```bash
-  npm i -D @astrojs/rss
-  ```
+- [Awesome Astro](https://github.com/one-aalam/awesome-astro)
+- [Astro Themes](https://astro.build/themes/)
 
-  ```ts
-  // src/pages/rss.xml.ts
-  import rss from "@astrojs/rss";
-  import { getCollection } from "astro:content";
-  export async function GET(context) {
-    const posts = await getCollection("posts", ({ data }) => !data.draft);
-    return rss({
-      title: "My Blog",
-      stylesheet: true,
-      items: posts.map(p => ({ link: `/${p.slug}/`, title: p.data.title, pubDate: p.data.date })),
-      site: context.site,
-    });
-  }
-  ```
+---
 
-### Deploy-time image optimization and caching
+## 🤝 Contributing
 
-* **What it is:** Optimize and cache images at build or edge.
-* **Patterns:**
+Contributions are welcome! This repository aims to be a comprehensive resource for Astro integrations.
 
-  * Build-time via `@astrojs/image` static generation.
-  * Edge transforms on Cloudflare Images or Vercel OG/Image; set `Cache-Control` and immutable fingerprints.
-* **Headers tip:**
+**Curator:** [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
 
-  ```plain
-  Cache-Control: public, max-age=31536000, immutable
-  ```
-* **Cloudflare Pages _headers example:**
+**How to contribute:**
 
-  ```
-  /assets/*
-    Cache-Control: public, max-age=31536000, immutable
-  ```
+1. **Add a new integration**: Submit a pull request with the integration details
+2. **Update existing entries**: Keep information current and accurate
+3. **Improve examples**: Add or enhance code examples
+4. **Fix issues**: Report bugs or suggest improvements
 
+**Guidelines:**
+
+- Only include integrations that are actively maintained
+- Provide links to documentation, GitHub, and npm
+- Include installation instructions
+- Add code examples when possible
+- Keep descriptions concise and helpful
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the Astro community**
+
+Curated by [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
+
+[⭐ Star this repo](https://github.com/RichLewis007/awesome-astro-integrations) if you find it helpful!
+
+</div>
