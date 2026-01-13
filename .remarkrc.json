@@ -1,16 +1,7 @@
 {
   "plugins": [
-    [
-      "remark-lint-awesome-list-item",
-      false
-    ],
-    [
-      "remark-lint-awesome-badge",
-      false
-    ],
-    [
-      "remark-lint-awesome-contributing",
-      false
-    ]
+    ["remark-lint-awesome-list-item", false],
+    ["remark-lint-awesome-badge", false],
+    ["remark-lint-awesome-contributing", false]
   ]
 }

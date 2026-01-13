@@ -21,11 +21,13 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/mdx
 ```
 
 **Usage:**
+
 ```mdx
 ---
 // src/pages/blog/post.mdx
@@ -75,7 +77,7 @@ const allPosts = await getCollection("blog", ({ data }) => {
 });
 
 // Sort posts by date
-const sortedPosts = allPosts.sort((a, b) => 
+const sortedPosts = allPosts.sort((a, b) =>
   b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -147,6 +149,7 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/starlight
 ```
