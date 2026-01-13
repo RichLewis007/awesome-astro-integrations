@@ -1,12 +1,11 @@
 <!--lint disable awesome-list-item awesome-badge awesome-contributing double-link-->
 <div align="center">
 
-# 🚀 Awesome Astro Integrations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Astro Integrations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-**A curated, opinionated collection of the very best Astro integrations**
+Extensions and plugins that add functionality to Astro web framework projects.
 
 [![Astro](https://img.shields.io/badge/Astro-5.0+-FF5D01?logo=astro&logoColor=white)](https://astro.build)
-[![License](https://img.shields.io/badge/license-CC0--1.0-blue.svg)](LICENSE)
 [![Maintained](https://img.shields.io/badge/maintained-yes-green.svg)](https://github.com/RichLewis007/awesome-astro-integrations)
 
 _Constantly updated with reviews and recommendations for your kind of project_
@@ -15,7 +14,7 @@ _Constantly updated with reviews and recommendations for your kind of project_
 
 ---
 
-## 📑 Table of Contents
+## Contents
 
 - [About](#-about)
 - [Quick Start](#-quick-start)
@@ -37,7 +36,6 @@ _Constantly updated with reviews and recommendations for your kind of project_
 - [Code Examples](#-code-examples)
 - [Best Practices](#-best-practices)
 - [Resources](#-resources)
-- [Contributing](#-contributing)
 
 ---
 
@@ -1034,12 +1032,7 @@ Contributions are welcome! This repository aims to be a comprehensive resource f
 
 ---
 
-<div align="center">
+## Footnotes
 
-**Made with ❤️ for the Astro community**
-
-Curated by [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007))
-
-[⭐ Star this repo](https://github.com/RichLewis007/awesome-astro-integrations) if you find it helpful!
-
-</div>
+- Curated by [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007))
+- [⭐ Star this repo](https://github.com/RichLewis007/awesome-astro-integrations) if you find it helpful!
