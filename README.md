@@ -1,6 +1,8 @@
 <!--lint disable awesome-list-item awesome-badge awesome-contributing double-link-->
 <div align="center">
 
+<img src="images/awesome-astro-integrations-banner.jpg" alt="Awesome Astro Integrations" width="800">
+
 # Awesome Astro Integrations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 Extensions and plugins that add functionality to Astro web framework projects.
