@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "awesome-list-item": "off",
+    "awesome-badge": "off",
+    "awesome-contributing": "off",
+    "double-link": "warn"
+  }
+}

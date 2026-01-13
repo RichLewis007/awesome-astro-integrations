@@ -1,4 +1,6 @@
-# 🚀 Awesome Astro Integrations
+<!--lint disable awesome-list-item awesome-badge awesome-contributing-->
+
+# 🚀 Awesome Astro Integrations [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 <div align="center">
 
@@ -44,9 +46,9 @@ _Constantly updated with reviews and recommendations for your kind of project_
 
 This repository is your go-to resource for discovering the best Astro integrations. Whether you're building a blog, documentation site, e-commerce platform, or web application, you'll find carefully curated integrations that deliver real impact.
 
-**Curated by:** [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
+**Curated by:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
 
-**What makes an integration "awesome"?**
+**What makes an integration "AWESOME"?**
 
 - ✅ Actively maintained
 - ✅ Well-documented
@@ -1000,7 +1002,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 - [Astro Blog](https://astro.build/blog/)
 - [Astro GitHub Discussions](https://github.com/withastro/astro/discussions)
-- [r/astrojs](https://www.reddit.com/r/astrojs/) - Reddit community
+- [r/astrojs](https://www.reddit.com/r/astrojs/) - Reddit community.
 - [Stack Overflow - Astro](https://stackoverflow.com/questions/tagged/astro)
 
 ### Related Awesome Lists
@@ -1014,7 +1016,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 Contributions are welcome! This repository aims to be a comprehensive resource for Astro integrations.
 
-**Curator:** [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
+**Curator:** [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
 
 **How to contribute:**
 
@@ -1037,7 +1039,7 @@ Contributions are welcome! This repository aims to be a comprehensive resource f
 
 **Made with ❤️ for the Astro community**
 
-Curated by [Rich Lewis](https://github.com/RichLewis007) ([@RichLewis007](https://github.com/RichLewis007))
+Curated by [Rich Lewis](https://RichLewis.com) ([@RichLewis007](https://github.com/RichLewis007) on GitHub)
 
 [⭐ Star this repo](https://github.com/RichLewis007/awesome-astro-integrations) if you find it helpful!
 
