@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://richlewis007.github.io/awesome-astro-integrations/sitemap.xml
