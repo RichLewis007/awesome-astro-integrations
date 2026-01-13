@@ -18,11 +18,13 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/react react react-dom
 ```
 
 **Usage:**
+
 ```astro
 ---
 // src/pages/index.astro
@@ -33,17 +35,14 @@ import { Counter } from "../components/react/Counter.tsx";
 ```
 
 **React Component:**
+
 ```tsx
 // src/components/react/Counter.tsx
 import { useState } from "react";
 
 export function Counter() {
   const [count, setCount] = useState(0);
-  return (
-    <button onClick={() => setCount(count + 1)}>
-      Count: {count}
-    </button>
-  );
+  return <button onClick={() => setCount(count + 1)}>Count: {count}</button>;
 }
 ```
 
@@ -64,11 +63,13 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/vue vue
 ```
 
 **Usage:**
+
 ```astro
 ---
 // src/pages/index.astro
@@ -79,6 +80,7 @@ import { Counter } from "../components/vue/Counter.vue";
 ```
 
 **Vue Component:**
+
 ```vue
 <!-- src/components/vue/Counter.vue -->
 <script setup>
@@ -109,11 +111,13 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/svelte svelte
 ```
 
 **Usage:**
+
 ```astro
 ---
 // src/pages/index.astro
@@ -124,6 +128,7 @@ import { Counter } from "../components/svelte/Counter.svelte";
 ```
 
 **Svelte Component:**
+
 ```svelte
 <!-- src/components/svelte/Counter.svelte -->
 <script>
@@ -150,6 +155,7 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/preact preact
 ```
@@ -171,6 +177,7 @@ export default defineConfig({
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/solid-js solid-js
 ```
@@ -183,18 +190,18 @@ import { defineConfig } from "astro/config";
 import alpinejs from "@astrojs/alpinejs";
 
 export default defineConfig({
-  integrations: [
-    alpinejs(),
-  ],
+  integrations: [alpinejs()],
 });
 ```
 
 **Installation:**
+
 ```bash
 npm i -D @astrojs/alpinejs alpinejs
 ```
 
 **Usage:**
+
 ```astro
 ---
 // src/pages/index.astro
