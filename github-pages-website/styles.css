@@ -6,8 +6,8 @@
 }
 
 :root {
-  --astro-orange: #0066ff;
-  --astro-orange-dark: #0052cc;
+  --primary: #0066ff;
+  --primary-dark: #0052cc;
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
   --gray-200: #e5e7eb;
@@ -98,11 +98,11 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--astro-orange);
+  color: var(--primary);
 }
 
 .nav-link.active {
-  color: var(--astro-orange);
+  color: var(--primary);
 }
 
 .nav-link.active::after {
@@ -112,7 +112,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--astro-orange);
+  background: var(--primary);
 }
 
 /* Hero Section */
@@ -162,7 +162,7 @@ body {
 
 .highlight-box {
   background: linear-gradient(135deg, #e6f2ff 0%, #cce5ff 100%);
-  border: 2px solid var(--astro-orange);
+  border: 2px solid var(--primary);
   border-radius: 12px;
   padding: 2.5rem;
   margin: 3rem 0;
@@ -219,20 +219,20 @@ body {
 }
 
 .btn-primary {
-  background: var(--astro-orange);
+  background: var(--primary);
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: var(--astro-orange-dark);
+  background: var(--primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
   background: var(--white);
-  color: var(--astro-orange);
-  border-color: var(--astro-orange);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 .btn-secondary:hover {
@@ -274,7 +274,7 @@ body {
 .card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--astro-orange);
+  border-color: var(--primary);
 }
 
 .card-icon {
@@ -295,14 +295,14 @@ body {
 }
 
 .link {
-  color: var(--astro-orange);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .link:hover {
-  color: var(--astro-orange-dark);
+  color: var(--primary-dark);
   text-decoration: underline;
 }
 
@@ -323,7 +323,7 @@ body {
   background: var(--gray-50);
   border-radius: 8px;
   padding: 1.5rem;
-  border-left: 4px solid var(--astro-orange);
+  border-left: 4px solid var(--primary);
   transition: all 0.2s;
 }
 
@@ -349,7 +349,7 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.875rem;
-  color: var(--astro-orange);
+  color: var(--primary);
   font-weight: 600;
 }
 
@@ -377,7 +377,7 @@ body {
 .category-item:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--astro-orange);
+  border-color: var(--primary);
 }
 
 .category-item h3 {
@@ -394,7 +394,7 @@ body {
 }
 
 .category-link {
-  color: var(--astro-orange);
+  color: var(--primary);
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -404,7 +404,7 @@ body {
 }
 
 .category-link:hover {
-  color: var(--astro-orange-dark);
+  color: var(--primary-dark);
   gap: 0.75rem;
 }
 
@@ -529,7 +529,7 @@ body {
 }
 
 .footer-link:hover {
-  color: var(--astro-orange);
+  color: var(--primary);
 }
 
 .footer-bottom {
