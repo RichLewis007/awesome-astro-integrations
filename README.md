@@ -17,7 +17,7 @@ _Updated with reviews and recommendations for your kind of project_
 
 ## Contents
 
-- [About](#-about)
+- [About](#about)
 - [Quick Start](#-quick-start)
 - [Official Integrations](#-official-integrations)
   - [UI Frameworks](#ui-frameworks)
@@ -40,7 +40,7 @@ _Updated with reviews and recommendations for your kind of project_
 
 ---
 
-## 🎯 About
+## About
 
 This repository is your go-to resource for discovering the best Astro integrations. Whether you're building a blog, documentation site, e-commerce platform, or web application, you'll find carefully curated integrations that deliver real impact.
 
