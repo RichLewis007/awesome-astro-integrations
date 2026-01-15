@@ -18,13 +18,13 @@ _Updated with reviews and recommendations for your kind of project_
 ## Contents
 
 - [About](#about)
-- [Quick Start](#-quick-start)
-- [Official Integrations](#-official-integrations)
+- [Quick Start](#quick-start)
+- [Official Integrations](#official-integrations)
   - [UI Frameworks](#ui-frameworks)
   - [Content & Documentation](#content--documentation)
   - [Adapters & Deployment](#adapters--deployment)
   - [Other Official Integrations](#other-official-integrations)
-- [Community Integrations](#-community-integrations)
+- [Community Integrations](#community-integrations)
   - [Performance & Optimization](#performance--optimization)
   - [Styling & CSS](#styling--css)
   - [Images, Icons & Fonts](#images-icons--fonts)
@@ -34,9 +34,9 @@ _Updated with reviews and recommendations for your kind of project_
   - [Developer Experience](#developer-experience)
   - [Testing & Quality Assurance](#testing--quality-assurance)
   - [Accessibility](#accessibility)
-- [Code Examples](#-code-examples)
-- [Best Practices](#-best-practices)
-- [Resources](#-resources)
+- [Code Examples](#code-examples)
+- [Best Practices](#best-practices)
+- [Resources](#resources)
 
 ---
 
@@ -56,7 +56,7 @@ This repository is your go-to resource for discovering the best Astro integratio
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 <details>
 <summary><strong>Install an integration</strong></summary>
@@ -99,7 +99,7 @@ export default defineConfig({
 
 ---
 
-## 🏢 Official Integrations
+## Official Integrations
 
 Integrations maintained by the Astro core team. These are battle-tested and production-ready.
 
@@ -432,7 +432,7 @@ npx astro add partytown
 
 ---
 
-## 🌟 Community Integrations
+## Community Integrations
 
 High-quality integrations built and maintained by the Astro community.
 
@@ -926,7 +926,7 @@ npm i -D astro-a11y
 
 ---
 
-## 📝 Code Examples
+## Code Examples
 
 Detailed code examples and implementation guides are available in the [`examples/`](./examples/) directory:
 
@@ -942,7 +942,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 ---
 
-## 💡 Best Practices
+## Best Practices
 
 <details>
 <summary><strong>Island Architecture</strong></summary>
@@ -986,7 +986,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 ---
 
-## 📚 Resources
+## Resources
 
 ### Official Resources
 
@@ -1010,7 +1010,7 @@ Detailed code examples and implementation guides are available in the [`examples
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! This repository aims to be a comprehensive resource for Astro integrations.
 
