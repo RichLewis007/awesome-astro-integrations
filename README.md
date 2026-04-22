@@ -712,6 +712,22 @@ npm i -D prisma
 
 </details>
 
+<details>
+<summary><strong>astro-shopsavvy</strong> - Product data and price comparison as Content Collections</summary>
+
+- [📦 npm](https://www.npmjs.com/package/astro-shopsavvy)
+- [💻 GitHub](https://github.com/shopsavvy/astro-shopsavvy)
+
+**Why it's awesome:** Ships a Content Loader so products, prices, and price history become Astro Content Collections at build time. Includes a Zod schema, zero-JS server components (`<ProductCard>`, `<SearchResults>`), and opt-in hydrated islands (`<DealFeed>`, `<PriceHistory>`). Backed by the ShopSavvy Data API across thousands of retailers.
+
+**Installation:**
+
+```bash
+npm i astro-shopsavvy @shopsavvy/sdk
+```
+
+</details>
+
 ### SEO & Analytics
 
 <details>
