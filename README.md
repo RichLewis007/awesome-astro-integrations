@@ -712,6 +712,23 @@ npm i -D prisma
 
 </details>
 
+<details>
+<summary><strong>Neon</strong> - Serverless Postgres database</summary>
+
+- [📖 Documentation](https://neon.com/docs)
+- [📦 npm](https://www.npmjs.com/package/@neondatabase/serverless)
+- [💻 GitHub](https://github.com/neondatabase/serverless)
+
+**Why it's awesome:** Serverless Postgres with autoscaling, scale-to-zero, and database branching. The HTTP/WebSocket driver works great from Astro SSR and edge runtimes.
+
+**Installation:**
+
+```bash
+npm i @neondatabase/serverless
+```
+
+</details>
+
 ### SEO & Analytics
 
 <details>
